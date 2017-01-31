@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AberturaAPPViewController.swift
 //  desafioLeitorQRCode
 //
 //  Created by Hélio Mesquita on 31/01/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AberturaAPPViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
