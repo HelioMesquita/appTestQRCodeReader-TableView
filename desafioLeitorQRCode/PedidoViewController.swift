@@ -10,7 +10,7 @@ import UIKit
 
 class PedidoViewController: UIViewController {
     
-    let produto1 = Produto(codigoProduto: "01", codigoID: "01", descricao: "Panetone", preco: 10.0, quantidade: 100)
+    let produto1 = Produto(codigoProduto: "01", codigoID: "01", descricao: "Panetone", preco: 10.0, quantidade: 3)
     let produto2 = Produto(codigoProduto: "02", codigoID: "02", descricao: "Cookie", preco: 3, quantidade: 1000)
     let produto3 = Produto(codigoProduto: "03", codigoID: "03", descricao: "Bolacha", preco: 4, quantidade: 100)
     let produto4 = Produto(codigoProduto: "04", codigoID: "04", descricao: "Brownie", preco: 2, quantidade: 1000)
@@ -28,40 +28,12 @@ class PedidoViewController: UIViewController {
         tabela.dataSource = self
         
         produtos.append(produto1)
-        produtos.append(produto2)
-        produtos.append(produto3)
-        produtos.append(produto4)
+        //produtos.append(produto2)
+        //produtos.append(produto3)
+        //produtos.append(produto4)
         
-        var pedidoInicializado = Pedido(produto: produtos)
-        pedido = pedidoInicializado
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "vaiParaOScanner"{
-            if let nextViewController = segue.destination as? QRScannerController{
-                nextViewController.delegate = self
-            }
-        }
-        
-        if segue.identifier == "ChecklistPedido"{
-            if let nextViewController = segue.destination as? ChecklistViewController{
-                
-                var pedido:String = ""
-                
-                for i in 0...produtos.count-1{
-                    pedido += "\(produtos[i].produtoCompleto) \n"
-                }
-                nextViewController.pedidoMemorando = pedido
-            }
-        }
-
-
+        //var pedidoInicializado = Pedido(produto: produtos)
+        //pedido = pedidoInicializado
     }
 
 

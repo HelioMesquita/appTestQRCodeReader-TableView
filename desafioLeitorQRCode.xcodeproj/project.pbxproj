@@ -23,6 +23,7 @@
 		FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */; };
 		FD2D95191E41127C0032B65D /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95181E41127C0032B65D /* ChecklistViewController.swift */; };
 		FD2D951B1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */; };
+		FD2D95211E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerReader.swift; sourceTree = "<group>"; };
 		FD2D95181E41127C0032B65D /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController + Protocol.swift"; sourceTree = "<group>"; };
+		FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController+PrepareForSegue.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +94,10 @@
 		FD2D95051E40CF150032B65D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FD2D95061E40D1950032B65D /* PedidoViewController.swift */,
-				FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */,
-				FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */,
-				FD2D94F01E40C1DF0032B65D /* AberturaAPPViewController.swift */,
-				FD2D95031E40CDE80032B65D /* InformacoesClienteViewController.swift */,
-				FD2D95181E41127C0032B65D /* ChecklistViewController.swift */,
+				FD2D951F1E411F0B0032B65D /* InformacoesClienteViewController */,
+				FD2D951E1E411EFD0032B65D /* ChecklistViewController */,
+				FD2D951D1E411EF20032B65D /* AberturaDoApp */,
+				FD2D951C1E411EE00032B65D /* PedidoViewController */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -119,6 +119,41 @@
 				FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */,
 			);
 			name = QRCodeReader;
+			sourceTree = "<group>";
+		};
+		FD2D951C1E411EE00032B65D /* PedidoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D95061E40D1950032B65D /* PedidoViewController.swift */,
+				FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */,
+				FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */,
+				FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */,
+			);
+			name = PedidoViewController;
+			sourceTree = "<group>";
+		};
+		FD2D951D1E411EF20032B65D /* AberturaDoApp */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D94F01E40C1DF0032B65D /* AberturaAPPViewController.swift */,
+			);
+			name = AberturaDoApp;
+			sourceTree = "<group>";
+		};
+		FD2D951E1E411EFD0032B65D /* ChecklistViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D95181E41127C0032B65D /* ChecklistViewController.swift */,
+			);
+			name = ChecklistViewController;
+			sourceTree = "<group>";
+		};
+		FD2D951F1E411F0B0032B65D /* InformacoesClienteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D95031E40CDE80032B65D /* InformacoesClienteViewController.swift */,
+			);
+			name = InformacoesClienteViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2D94F11E40C1DF0032B65D /* AberturaAPPViewController.swift in Sources */,
+				FD2D95211E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift in Sources */,
 				FD2D950C1E40D41A0032B65D /* Cliente.swift in Sources */,
 				FD2D95101E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift in Sources */,
 				FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */,

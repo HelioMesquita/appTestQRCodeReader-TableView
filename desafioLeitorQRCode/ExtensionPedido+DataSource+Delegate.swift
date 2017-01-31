@@ -23,14 +23,10 @@ import UIKit
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
             
-            cell.descricao.text = self.produtos[indexPath.row].descricao
+            cell.recebeProduto(produto: produtos[indexPath.row])
             
             return cell
         }
-    
-//      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//           return true
-//      }
         
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
