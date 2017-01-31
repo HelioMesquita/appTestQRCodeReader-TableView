@@ -16,14 +16,14 @@ import UIKit
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.pedido!.contador
+            return self.produtos.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
             
-            cell.descricao.text = self.pedido?.produtos?[indexPath.row].descricao
+            cell.descricao.text = self.produtos[indexPath.row].descricao
             
             return cell
         }
@@ -34,7 +34,7 @@ import UIKit
         
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
-                self.pedido?.produtos?.remove(at: indexPath.row)
+                self.produtos.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .top)
             } else if editingStyle == .insert {
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
