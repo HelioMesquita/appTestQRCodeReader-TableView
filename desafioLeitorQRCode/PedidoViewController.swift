@@ -12,7 +12,14 @@ class PedidoViewController: UIViewController {
 
     
     var produtos = [Produto]()
-    var pedido = Pedido()
+    var pedido:Pedido?
+    
+    let produto1 = Produto(codigoProduto: "01", codigoID: "01", descricao: "Panetone", preco: 10.0, quantidade: 100)
+    let produto2 = Produto(codigoProduto: "02", codigoID: "02", descricao: "Cookie", preco: 3, quantidade: 1000)
+    let produto3 = Produto(codigoProduto: "03", codigoID: "03", descricao: "Bolacha", preco: 4, quantidade: 100)
+    let produto4 = Produto(codigoProduto: "04", codigoID: "04", descricao: "Brownie", preco: 2, quantidade: 1000)
+    
+    
     
     
     @IBOutlet weak var tabela: UITableView!
@@ -21,11 +28,6 @@ class PedidoViewController: UIViewController {
         super.viewDidLoad()
         tabela.delegate = self
         tabela.dataSource = self
-        
-        let produto1 = Produto(codigoProduto: "01", codigoID: "01", descricao: "Panetone", preco: 10.0, quantidade: 100)
-        let produto2 = Produto(codigoProduto: "02", codigoID: "02", descricao: "Cookie", preco: 3, quantidade: 1000)
-        let produto3 = Produto(codigoProduto: "03", codigoID: "03", descricao: "Bolacha", preco: 4, quantidade: 100)
-        let produto4 = Produto(codigoProduto: "04", codigoID: "04", descricao: "Brownie", preco: 2, quantidade: 1000)
         
         produtos.append(produto1)
         produtos.append(produto2)
@@ -42,15 +44,45 @@ class PedidoViewController: UIViewController {
     }
     
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "vaiParaOScanner"{
+            if let nextVC = segue.destination as? QRScannerController{
+                nextVC.delegate = self
+            }
+        }
     }
-    */
 
+
+}
+
+
+extension PedidoViewController: AdicionaProdutosTabela{
+    func adicionaProdutosDelegate(id: String) {
+        print("Produto \(id)")
+        
+        switch id {
+        case "01":
+            self.produtos.append(self.produto1)
+            tabela.reloadData()
+            break
+        case "02":
+            self.produtos.append(self.produto2)
+            tabela.reloadData()
+            break
+        case "03":
+            self.produtos.append(self.produto3)
+            tabela.reloadData()
+            break
+        case "04":
+            self.produtos.append(self.produto4)
+            tabela.reloadData()
+            break
+        default:
+            break
+        }
+        
+        
+        
+    }
+    
 }

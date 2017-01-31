@@ -20,6 +20,7 @@
 		FD2D950E1E40D67D0032B65D /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D950D1E40D67D0032B65D /* Pedido.swift */; };
 		FD2D95101E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */; };
 		FD2D95141E40D9390032B65D /* CelulaProduto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95131E40D9390032B65D /* CelulaProduto.swift */; };
+		FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FD2D950D1E40D67D0032B65D /* Pedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
 		FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedido+DataSource+Delegate.swift"; sourceTree = "<group>"; };
 		FD2D95131E40D9390032B65D /* CelulaProduto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaProduto.swift; sourceTree = "<group>"; };
+		FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		FD2D94ED1E40C1DF0032B65D /* desafioLeitorQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				FD2D95151E40EC150032B65D /* QRCodeReader */,
 				FD2D95081E40D2820032B65D /* Model */,
 				FD2D95051E40CF150032B65D /* ViewController */,
 				FD2D94EE1E40C1DF0032B65D /* AppDelegate.swift */,
@@ -104,6 +107,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		FD2D95151E40EC150032B65D /* QRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */,
+			);
+			name = QRCodeReader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +147,7 @@
 				TargetAttributes = {
 					FD2D94EA1E40C1DF0032B65D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XJ3PM54JPR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,6 +191,7 @@
 				FD2D94F11E40C1DF0032B65D /* AberturaAPPViewController.swift in Sources */,
 				FD2D950C1E40D41A0032B65D /* Cliente.swift in Sources */,
 				FD2D95101E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift in Sources */,
+				FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */,
 				FD2D94F71E40C1DF0032B65D /* desafioLeitorQRCode.xcdatamodeld in Sources */,
 				FD2D95071E40D1950032B65D /* PedidoViewController.swift in Sources */,
 				FD2D950E1E40D67D0032B65D /* Pedido.swift in Sources */,
@@ -306,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
 				INFOPLIST_FILE = desafioLeitorQRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Callidus.desafioLeitorQRCode;
@@ -318,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
 				INFOPLIST_FILE = desafioLeitorQRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Callidus.desafioLeitorQRCode;
