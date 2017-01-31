@@ -25,4 +25,9 @@ class Produto{
         self.quantidade = quantidade
     }
     
+    var produtoCompleto:String{
+        return String(self.codigoID! + " " + self.codigoProduto! + " " + self.descricao!)
+        
+        
+    }
 }

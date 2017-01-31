@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGm-Ey-YjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="-574.36281859070471"/>
+            <point key="canvasLocation" x="2542" y="-252"/>
         </scene>
         <!--Pedido View Controller-->
         <scene sceneID="VHk-Hb-OnF">
@@ -179,6 +179,9 @@
                                         <state key="normal" title="Fechar Pedido">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="3lc-6Y-Rdk" kind="show" identifier="ChecklistPedido" id="M07-87-3fW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -207,7 +210,7 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kjN-y2-Fsl" customClass="Ce">
                                 <rect key="frame" x="0.0" y="60" width="375" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CelulaProduto" rowHeight="58" id="g8q-SN-Oxe" customClass="CelulaProduto" customModule="desafioLeitorQRCode" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
@@ -238,7 +241,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.99523446134405669" blue="0.96524562447720175" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="XVJ-u4-7fy" firstAttribute="leading" secondItem="9cM-QM-5jD" secondAttribute="trailing" constant="8" id="E5y-ag-n4y"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="XVJ-u4-7fy" secondAttribute="bottom" constant="6" id="H8O-PV-T9h"/>
@@ -283,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="1640.8" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Checklist View Controller-->
         <scene sceneID="lUw-TU-emo">
             <objects>
-                <viewController id="3lc-6Y-Rdk" sceneMemberID="viewController">
+                <viewController id="3lc-6Y-Rdk" customClass="ChecklistViewController" customModule="desafioLeitorQRCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="73V-BV-Gze"/>
                         <viewControllerLayoutGuide type="bottom" id="pnY-o0-npn"/>
@@ -295,28 +298,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-Ub-esb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-Ub-esb">
                                 <rect key="frame" x="0.0" y="612" width="375" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oai-8I-16k">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oai-8I-16k">
                                         <rect key="frame" x="95" y="9" width="184" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Confirmar Pedido">
-                                            <color key="titleColor" red="0.93853211169999995" green="1" blue="0.97361019520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.76495951510000004" green="0.80737911949999996" blue="0.85340314139999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oai-8I-16k" firstAttribute="leading" secondItem="1hZ-Ub-esb" secondAttribute="leading" constant="95" id="ARX-Pz-AKp"/>
+                                    <constraint firstAttribute="height" constant="55" id="Bpr-YX-cnZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="oai-8I-16k" secondAttribute="bottom" constant="10" id="GKB-fN-1SE"/>
+                                    <constraint firstAttribute="trailing" secondItem="oai-8I-16k" secondAttribute="trailing" constant="96" id="jAW-Jj-e0B"/>
+                                    <constraint firstItem="oai-8I-16k" firstAttribute="top" secondItem="1hZ-Ub-esb" secondAttribute="top" constant="9" id="kmL-9m-x7t"/>
+                                </constraints>
                             </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRY-II-lZr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ADV-1b-2AH"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Check-list Pedido" id="S1k-4C-Ney">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="PgP-PO-Be9">
+                                            <connections>
+                                                <action selector="editar:" destination="3lc-6Y-Rdk" id="Q32-35-peu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xVT-sp-kRE">
+                                <rect key="frame" x="0.0" y="65" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1hZ-Ub-esb" firstAttribute="leading" secondItem="0zE-O3-hlO" secondAttribute="leading" id="43h-Wa-ak1"/>
+                            <constraint firstItem="sRY-II-lZr" firstAttribute="top" secondItem="0zE-O3-hlO" secondAttribute="top" id="7JJ-QG-mFy"/>
+                            <constraint firstAttribute="trailing" secondItem="1hZ-Ub-esb" secondAttribute="trailing" id="Boe-ET-4vy"/>
+                            <constraint firstItem="sRY-II-lZr" firstAttribute="leading" secondItem="0zE-O3-hlO" secondAttribute="leading" id="ZKl-KP-In5"/>
+                            <constraint firstItem="xVT-sp-kRE" firstAttribute="leading" secondItem="0zE-O3-hlO" secondAttribute="leading" id="gDj-q1-uO7"/>
+                            <constraint firstItem="pnY-o0-npn" firstAttribute="top" secondItem="xVT-sp-kRE" secondAttribute="bottom" constant="48" id="hFq-0r-Rg1"/>
+                            <constraint firstItem="xVT-sp-kRE" firstAttribute="top" secondItem="sRY-II-lZr" secondAttribute="bottom" id="nAN-IP-yhD"/>
+                            <constraint firstItem="pnY-o0-npn" firstAttribute="top" secondItem="1hZ-Ub-esb" secondAttribute="bottom" id="oXb-2e-YgY"/>
+                            <constraint firstAttribute="trailing" secondItem="sRY-II-lZr" secondAttribute="trailing" id="ru7-wo-wTp"/>
+                            <constraint firstAttribute="trailing" secondItem="xVT-sp-kRE" secondAttribute="trailing" id="v0i-Td-vT4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textoDescritivo" destination="xVT-sp-kRE" id="lxL-Ns-zpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvI-gH-x1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="729"/>
+            <point key="canvasLocation" x="2541.5999999999999" y="458.32083958020991"/>
         </scene>
     </scenes>
 </document>

@@ -27,10 +27,10 @@ class PedidoViewController: UIViewController {
         tabela.delegate = self
         tabela.dataSource = self
         
-        //produtos.append(produto1)
-        //produtos.append(produto2)
-        //produtos.append(produto3)
-        //produtos.append(produto4)
+        produtos.append(produto1)
+        produtos.append(produto2)
+        produtos.append(produto3)
+        produtos.append(produto4)
         
         var pedidoInicializado = Pedido(produto: produtos)
         pedido = pedidoInicializado
@@ -44,98 +44,25 @@ class PedidoViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vaiParaOScanner"{
-            if let nextVC = segue.destination as? QRScannerController{
-                nextVC.delegate = self
+            if let nextViewController = segue.destination as? QRScannerController{
+                nextViewController.delegate = self
             }
         }
+        
+        if segue.identifier == "ChecklistPedido"{
+            if let nextViewController = segue.destination as? ChecklistViewController{
+                
+                var pedido:String = ""
+                
+                for i in 0...produtos.count-1{
+                    pedido += "\(produtos[i].produtoCompleto) \n"
+                }
+                nextViewController.pedidoMemorando = pedido
+            }
+        }
+
+
     }
 
 
-}
-
-
-extension PedidoViewController: AdicionaProdutosTabela{
-    func adicionaProdutosDelegate(id: String) {
-        print("Produto \(id)")
-        
-        switch id {
-        
-        case "01":
-            
-            if self.produtos.contains(where: { (Produto) -> Bool in
-                if Produto.codigoProduto == produto1.codigoProduto{
-                    return true
-                    // se sim nao adiciona no if que esta em baixo
-                } else {
-                    
-                    return false
-                }
-            }) == false{
-                self.produtos.append(self.produto1)
-                tabela.reloadData()
-            }
-            
-            break
-        case "02":
-            if self.produtos.contains(where: { (Produto) -> Bool in
-                if Produto.codigoProduto == produto2.codigoProduto{
-                    return true
-                    // se sim nao adiciona no if que esta em baixo
-                } else {
-                    
-                    return false
-                }
-            }) == false{
-                self.produtos.append(self.produto2)
-                tabela.reloadData()
-            }
-            break
-            
-            
-        case "03":
-            if self.produtos.contains(where: { (Produto) -> Bool in
-                if Produto.codigoProduto == produto3.codigoProduto{
-                    return true
-                    // se sim nao adiciona no if que esta em baixo
-                } else {
-                    
-                    return false
-                }
-            }) == false{
-                self.produtos.append(self.produto3)
-                tabela.reloadData()
-            }
-            break
-        case "04":
-            
-           // esta funcao funciona verificando se ha algum produto com codigo igual
-            // ele percorre o array de produtps e retorna true caso encontre
-            // se nao tiver vai retornar falso
-            // quando retorna falso entra no segundo if
-            // na qual adiciona o produto na tabela
-            
-            // ## deve ser possivel melhora este tipo de funcao ##
-            
-           if self.produtos.contains(where: { (Produto) -> Bool in
-                if Produto.codigoProduto == produto4.codigoProduto{
-                    return true
-                    // se sim nao adiciona no if que esta em baixo
-                } else {
-                    
-                    return false
-                }
-           }) == false{
-                self.produtos.append(self.produto4)
-                tabela.reloadData()
-           }
-
-            break
-        default:
-            break
-        }
-        
-        
-        
-    }
-    
 }

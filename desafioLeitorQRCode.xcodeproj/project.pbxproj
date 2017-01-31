@@ -21,6 +21,8 @@
 		FD2D95101E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */; };
 		FD2D95141E40D9390032B65D /* CelulaProduto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95131E40D9390032B65D /* CelulaProduto.swift */; };
 		FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */; };
+		FD2D95191E41127C0032B65D /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95181E41127C0032B65D /* ChecklistViewController.swift */; };
+		FD2D951B1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedido+DataSource+Delegate.swift"; sourceTree = "<group>"; };
 		FD2D95131E40D9390032B65D /* CelulaProduto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaProduto.swift; sourceTree = "<group>"; };
 		FD2D95161E40EC2C0032B65D /* QRScannerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerReader.swift; sourceTree = "<group>"; };
+		FD2D95181E41127C0032B65D /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
+		FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController + Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +94,10 @@
 			children = (
 				FD2D95061E40D1950032B65D /* PedidoViewController.swift */,
 				FD2D950F1E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift */,
+				FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */,
 				FD2D94F01E40C1DF0032B65D /* AberturaAPPViewController.swift */,
 				FD2D95031E40CDE80032B65D /* InformacoesClienteViewController.swift */,
+				FD2D95181E41127C0032B65D /* ChecklistViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				FD2D95071E40D1950032B65D /* PedidoViewController.swift in Sources */,
 				FD2D950E1E40D67D0032B65D /* Pedido.swift in Sources */,
 				FD2D95041E40CDE80032B65D /* InformacoesClienteViewController.swift in Sources */,
+				FD2D951B1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift in Sources */,
 				FD2D95141E40D9390032B65D /* CelulaProduto.swift in Sources */,
+				FD2D95191E41127C0032B65D /* ChecklistViewController.swift in Sources */,
 				FD2D94EF1E40C1DF0032B65D /* AppDelegate.swift in Sources */,
 				FD2D950A1E40D29B0032B65D /* Produto.swift in Sources */,
 			);
