@@ -15,6 +15,7 @@ class Produto{
     var descricao:String?
     var preco:Double?
     var quantidade:Int?
+    var quantidadeTravada:Int?
     
     convenience init(codigoProduto:String,codigoID:String,descricao:String,preco:Double,quantidade:Int) {
        self.init()
@@ -23,11 +24,11 @@ class Produto{
         self.descricao = descricao
         self.preco = preco
         self.quantidade = quantidade
+        self.quantidadeTravada = 1
     }
     
     var produtoCompleto:String{
         return String(self.codigoID! + " " + self.codigoProduto! + " " + self.descricao!)
-        
         
     }
 }

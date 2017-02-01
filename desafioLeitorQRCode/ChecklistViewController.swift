@@ -13,18 +13,18 @@ import UIKit
 class ChecklistViewController: UIViewController{
     
     @IBOutlet weak var textoDescritivo: UITextView!
+
     @IBAction func editar(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    var pedidoMemorando:String?
-    
+    var resumoDoPedido:String?
+    var cliente = Cliente()
     
     override func viewDidLoad() {
-        colocaNoTextView(palavras: pedidoMemorando!)
+        colocaNoTextView(palavras: resumoDoPedido!)
         
     }
-    
     
     func colocaNoTextView(palavras:String){
         textoDescritivo.text = palavras

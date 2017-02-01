@@ -10,9 +10,11 @@ import UIKit
 
 class AberturaAPPViewController: UIViewController {
 
+    @IBOutlet var botao: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        botao.layer.cornerRadius = 27
     }
 
     override func didReceiveMemoryWarning() {

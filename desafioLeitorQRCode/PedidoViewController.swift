@@ -14,10 +14,11 @@ class PedidoViewController: UIViewController {
     let produto2 = Produto(codigoProduto: "02", codigoID: "02", descricao: "Cookie", preco: 3, quantidade: 1000)
     let produto3 = Produto(codigoProduto: "03", codigoID: "03", descricao: "Bolacha", preco: 4, quantidade: 100)
     let produto4 = Produto(codigoProduto: "04", codigoID: "04", descricao: "Brownie", preco: 2, quantidade: 1000)
-    
+    let produto5 = Produto(codigoProduto: "05", codigoID: "05", descricao: "Chocolate", preco: 2, quantidade: 1000)
+
     var produtos = [Produto]()
-    
-    var pedido:Pedido?
+    var pedido = Pedido()
+    var cliente = Cliente()
     
     
     @IBOutlet weak var tabela: UITableView!
@@ -27,13 +28,17 @@ class PedidoViewController: UIViewController {
         tabela.delegate = self
         tabela.dataSource = self
         
-        produtos.append(produto1)
+        //produtos.append(produto1)
         //produtos.append(produto2)
         //produtos.append(produto3)
         //produtos.append(produto4)
         
-        //var pedidoInicializado = Pedido(produto: produtos)
-        //pedido = pedidoInicializado
+        
+        pedido.adicionaProduto(produto: produto1)
+        pedido.adicionaProduto(produto: produto2)
+        pedido.adicionaProduto(produto: produto3)
+        pedido.adicionaProduto(produto: produto4)
+        
     }
 
 

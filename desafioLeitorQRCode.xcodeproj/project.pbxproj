@@ -24,6 +24,7 @@
 		FD2D95191E41127C0032B65D /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95181E41127C0032B65D /* ChecklistViewController.swift */; };
 		FD2D951B1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */; };
 		FD2D95211E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */; };
+		FD2D95231E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95221E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FD2D95181E41127C0032B65D /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		FD2D951A1E4113A40032B65D /* ExtensionPedidoViewController + Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController + Protocol.swift"; sourceTree = "<group>"; };
 		FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController+PrepareForSegue.swift"; sourceTree = "<group>"; };
+		FD2D95221E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionInformacoesCliente + UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2D95031E40CDE80032B65D /* InformacoesClienteViewController.swift */,
+				FD2D95221E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift */,
 			);
 			name = InformacoesClienteViewController;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				FD2D94F11E40C1DF0032B65D /* AberturaAPPViewController.swift in Sources */,
 				FD2D95211E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift in Sources */,
+				FD2D95231E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift in Sources */,
 				FD2D950C1E40D41A0032B65D /* Cliente.swift in Sources */,
 				FD2D95101E40D7060032B65D /* ExtensionPedido+DataSource+Delegate.swift in Sources */,
 				FD2D95171E40EC2C0032B65D /* QRScannerReader.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class CelulaProduto: UITableViewCell {
 
+    var quantidadeDoProduto:Int = 1
     var produto:Produto?
     
     @IBOutlet weak var descricao: UILabel!
@@ -17,27 +18,28 @@ class CelulaProduto: UITableViewCell {
     @IBOutlet weak var stepper: UIStepper!
     
     @IBAction func adicionaOuRemove(_ sender: UIStepper) {
-        print(sender.value)
-        if Double((produto?.quantidade)!) < sender.value{
-            sender.value = Double((produto?.quantidade)!)
+       if Double((produto?.quantidade)!) >= sender.value{
+            self.quantidade.text = String(format: "%0.f", sender.value)
+            quantidadeDoProduto = Int(sender.value)
+            self.produto?.quantidadeTravada = quantidadeDoProduto
         } else{
-            self.quantidade.text = String(format: "%.0f", sender.value)
+            sender.value = Double((produto?.quantidade)!)
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         stepper.value = 1
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func recebeProduto(produto:Produto){
+    func recebeProduto(produto:Produto,quantidade:Int){
             descricao.text = produto.descricao
             self.produto = produto
+            self.quantidadeDoProduto = quantidade
     }
     
 

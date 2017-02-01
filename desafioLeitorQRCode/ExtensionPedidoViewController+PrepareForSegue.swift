@@ -12,7 +12,6 @@ import UIKit
 
 extension PedidoViewController{
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vaiParaOScanner"{
             if let nextViewController = segue.destination as? QRScannerController{
@@ -22,18 +21,21 @@ extension PedidoViewController{
         
         if segue.identifier == "ChecklistPedido"{
             if let nextViewController = segue.destination as? ChecklistViewController{
+                nextViewController.cliente = cliente
                 
-                var pedido:String = ""
+                var texto:String = ""
+                texto += "\(cliente.nome!) \(cliente.ddd!)\(cliente.telefone!)\n\(cliente.email!)\n\(cliente.informacoesAdicionais!)"
                 
-                for i in 0...produtos.count-1{
-                    pedido += "\(produtos[i].produtoCompleto) \n"
+                for i in 0...self.pedido.contador-1 {
+                    texto += "Item: \(pedido.produtos[i].descricao!) - Quantidade: \(pedido.produtos[i].quantidadeTravada!)\n"
                 }
-                nextViewController.pedidoMemorando = pedido
+                
+                nextViewController.resumoDoPedido = texto
             }
         }
         
         
-    }
+}
 
     
     

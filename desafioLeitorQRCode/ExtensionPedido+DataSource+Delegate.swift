@@ -9,22 +9,24 @@
 import Foundation
 import UIKit
 
-    extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
+extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
     
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.produtos.count
+            return self.pedido.contador
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
             
-            cell.recebeProduto(produto: produtos[indexPath.row])
-            
+            let pedidoRecebido = pedido.retornaProduto(indice: indexPath.row)
+                
+            cell.recebeProduto(produto: pedidoRecebido.produtoEnvia,quantidade: pedidoRecebido.quantidadeEnvia)
+                
             return cell
         }
         

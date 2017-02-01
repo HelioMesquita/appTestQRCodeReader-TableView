@@ -11,28 +11,28 @@ import UIKit
 
 extension PedidoViewController: AdicionaProdutosTabela{
         func adicionaProdutosDelegate(id: String) {
-            print("Produto \(id)")
+           // print("Produto \(id)")
             
             switch id {
                 
             case "01":
-                
-                if self.produtos.contains(where: { (Produto) -> Bool in
+                if self.pedido.produtos.contains(where: { (Produto) -> Bool in
                     if Produto.codigoProduto == produto1.codigoProduto{
                         return true
                         // se sim nao adiciona no if que esta em baixo
                     } else {
-                        
+            
                         return false
                     }
                 }) == false{
-                    self.produtos.append(self.produto1)
+                    pedido.adicionaProduto(produto: produto1)
                     tabela.reloadData()
                 }
+
                 
                 break
             case "02":
-                if self.produtos.contains(where: { (Produto) -> Bool in
+                if self.pedido.produtos.contains(where: { (Produto) -> Bool in
                     if Produto.codigoProduto == produto2.codigoProduto{
                         return true
                         // se sim nao adiciona no if que esta em baixo
@@ -41,14 +41,14 @@ extension PedidoViewController: AdicionaProdutosTabela{
                         return false
                     }
                 }) == false{
-                    self.produtos.append(self.produto2)
+                    pedido.adicionaProduto(produto: produto2)
                     tabela.reloadData()
                 }
                 break
                 
                 
             case "03":
-                if self.produtos.contains(where: { (Produto) -> Bool in
+                if self.pedido.produtos.contains(where: { (Produto) -> Bool in
                     if Produto.codigoProduto == produto3.codigoProduto{
                         return true
                         // se sim nao adiciona no if que esta em baixo
@@ -57,7 +57,7 @@ extension PedidoViewController: AdicionaProdutosTabela{
                         return false
                     }
                 }) == false{
-                    self.produtos.append(self.produto3)
+                    pedido.adicionaProduto(produto: produto3)
                     tabela.reloadData()
                 }
                 break
@@ -71,7 +71,7 @@ extension PedidoViewController: AdicionaProdutosTabela{
                 
                 // ## deve ser possivel melhora este tipo de funcao ##
                 
-                if self.produtos.contains(where: { (Produto) -> Bool in
+                if self.pedido.produtos.contains(where: { (Produto) -> Bool in
                     if Produto.codigoProduto == produto4.codigoProduto{
                         return true
                         // se sim nao adiciona no if que esta em baixo
@@ -80,7 +80,7 @@ extension PedidoViewController: AdicionaProdutosTabela{
                         return false
                     }
                 }) == false{
-                    self.produtos.append(self.produto4)
+                    pedido.adicionaProduto(produto: produto4)
                     tabela.reloadData()
                 }
                 
@@ -88,10 +88,5 @@ extension PedidoViewController: AdicionaProdutosTabela{
             default:
                 break
             }
-            
-            
-            
         }
-        
-
 }

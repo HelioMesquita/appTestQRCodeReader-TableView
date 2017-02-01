@@ -18,7 +18,15 @@ class Cliente{
     var informacoesAdicionais:String?
     var desconto:Double?
     
-    
-    
+    convenience init(nome:String,ddd:Int,telefone:Double,email:String,cnpj:Double,informacoesAdicionais:String) {
+        self.init()
+        self.nome = nome
+        self.ddd = ddd
+        self.telefone = telefone
+        self.email = email
+        self.cnpj = cnpj
+        self.informacoesAdicionais = informacoesAdicionais
+        self.desconto = 0.95 //5%
+    }
     
 }
