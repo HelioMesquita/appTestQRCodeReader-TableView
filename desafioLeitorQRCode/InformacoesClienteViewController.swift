@@ -33,7 +33,7 @@ class InformacoesClienteViewController: UIViewController, UITextFieldDelegate {
             present(alertController, animated: true, completion: nil)
             
         }else{
-            var cliente = Cliente(nome: nomeCampo.text!, ddd: Int(dddCampo.text!)!, telefone: Double(telefoneCampo.text!)!, email: emailCampo.text!, cnpj: Double(cnpjCampo.text!)!, informacoesAdicionais: "")
+            let cliente = Cliente(nome: nomeCampo.text!, ddd: Int(dddCampo.text!)!, telefone: Double(telefoneCampo.text!)!, email: emailCampo.text!, cnpj: Double(cnpjCampo.text!)!, informacoesAdicionais: "")
 
             performSegue(withIdentifier: "PedidoViewController", sender: cliente)
         }

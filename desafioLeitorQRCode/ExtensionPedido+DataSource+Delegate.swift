@@ -11,32 +11,30 @@ import UIKit
 
 extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
     
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.pedido.contador
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
+        let pedidoRecebido = pedido.retornaProduto(indice: indexPath.row)
+        // utiliza esta closure para fornecer informacoes na celulaproduto
+        cell.recebeProduto(produto: pedidoRecebido.produtoEnvia,quantidade: pedidoRecebido.quantidadeEnvia)
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.pedido.contador
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.produtos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .top)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
-            
-            let pedidoRecebido = pedido.retornaProduto(indice: indexPath.row)
-                
-            cell.recebeProduto(produto: pedidoRecebido.produtoEnvia,quantidade: pedidoRecebido.quantidadeEnvia)
-                
-            return cell
-        }
-        
-        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                self.produtos.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .top)
-            } else if editingStyle == .insert {
-                // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-            }
-        }
-        
+    }
+    
 }

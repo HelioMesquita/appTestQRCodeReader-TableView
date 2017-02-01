@@ -9,8 +9,7 @@
 import Foundation
 
 extension InformacoesClienteViewController{
-    
-    
+
     func delegateTextField(){
         nomeCampo.delegate = self
         dddCampo.delegate = self
@@ -18,10 +17,5 @@ extension InformacoesClienteViewController{
         emailCampo.delegate = self
         cnpjCampo.delegate = self
     }
-    
-    
-    
-    
-    
-    
+
 }

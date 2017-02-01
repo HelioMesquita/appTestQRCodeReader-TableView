@@ -21,12 +21,6 @@ class Pedido{
         return produtos.count
     }
 
-    //convenience init(produto:Produto){
-       // self.init()
-      //  self.produtos?.append(produto)
-     //   self.quantidade?.append(1)
-    //}
-    
     func adicionaProduto(produto:Produto){
         self.produtos.append(produto)
         self.quantidades.append(1)

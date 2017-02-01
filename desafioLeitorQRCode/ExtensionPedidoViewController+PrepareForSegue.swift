@@ -21,10 +21,9 @@ extension PedidoViewController{
         
         if segue.identifier == "ChecklistPedido"{
             if let nextViewController = segue.destination as? ChecklistViewController{
-                nextViewController.cliente = cliente
                 
                 var texto:String = ""
-                texto += "\(cliente.nome!) \(cliente.ddd!)\(cliente.telefone!)\n\(cliente.email!)\n\(cliente.informacoesAdicionais!)"
+                //texto += "\(cliente.nome!)\n\(cliente.ddd!) \(cliente.telefone!)\n\(cliente.email!)\n\(cliente.informacoesAdicionais!)"
                 
                 for i in 0...self.pedido.contador-1 {
                     texto += "Item: \(pedido.produtos[i].descricao!) - Quantidade: \(pedido.produtos[i].quantidadeTravada!)\n"
@@ -33,7 +32,6 @@ extension PedidoViewController{
                 nextViewController.resumoDoPedido = texto
             }
         }
-        
         
 }
 

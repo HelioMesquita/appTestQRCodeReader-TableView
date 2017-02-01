@@ -8,31 +8,35 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 
-class ChecklistViewController: UIViewController{
+class ChecklistViewController: UIViewController, MFMailComposeViewControllerDelegate{
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
     
     @IBOutlet weak var textoDescritivo: UITextView!
-
     @IBAction func editar(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     var resumoDoPedido:String?
-    var cliente = Cliente()
     
     override func viewDidLoad() {
         colocaNoTextView(palavras: resumoDoPedido!)
-        
     }
     
     func colocaNoTextView(palavras:String){
         textoDescritivo.text = palavras
     }
-    
-    
-    
-    
-    
-    
+ 
+
+
 }

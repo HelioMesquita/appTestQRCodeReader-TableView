@@ -20,7 +20,6 @@ class PedidoViewController: UIViewController {
     var pedido = Pedido()
     var cliente = Cliente()
     
-    
     @IBOutlet weak var tabela: UITableView!
     
     override func viewDidLoad() {
@@ -32,7 +31,6 @@ class PedidoViewController: UIViewController {
         //produtos.append(produto2)
         //produtos.append(produto3)
         //produtos.append(produto4)
-        
         
         pedido.adicionaProduto(produto: produto1)
         pedido.adicionaProduto(produto: produto2)

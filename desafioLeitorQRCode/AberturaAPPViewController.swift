@@ -17,11 +17,5 @@ class AberturaAPPViewController: UIViewController {
         botao.layer.cornerRadius = 27
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
