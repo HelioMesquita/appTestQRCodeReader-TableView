@@ -16,7 +16,7 @@ extension ChecklistViewController{
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["mah.lorenzo@hotmail.com"])
+        mailComposerVC.setToRecipients(["oorcamento@homeon.com.br;"])
         mailComposerVC.setSubject("Lista de Compras")
         mailComposerVC.setMessageBody("<b>Sending e-mail in-app is not so bad!</b>", isHTML: true)
         return mailComposerVC

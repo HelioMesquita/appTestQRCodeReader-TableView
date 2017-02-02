@@ -22,14 +22,14 @@ extension PedidoViewController{
         if segue.identifier == "ChecklistPedido"{
             if let nextViewController = segue.destination as? ChecklistViewController{
                 
-                var texto:String = ""
+                var formatacaoTextoResumo:String = ""
                 //texto += "\(cliente.nome!)\n\(cliente.ddd!) \(cliente.telefone!)\n\(cliente.email!)\n\(cliente.informacoesAdicionais!)"
                 
                 for i in 0...self.pedido.contador-1 {
-                    texto += "Item: \(pedido.produtos[i].descricao!) - Quantidade: \(pedido.produtos[i].quantidadeTravada!)\n"
+                    formatacaoTextoResumo += "Item: \(pedido.produtos[i].descricao!) - Quantidade: \(pedido.produtos[i].quantidadeTravada!)\n"
                 }
                 
-                nextViewController.resumoDoPedido = texto
+                nextViewController.resumoDoPedido = formatacaoTextoResumo
             }
         }
         

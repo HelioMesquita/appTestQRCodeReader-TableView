@@ -28,6 +28,8 @@ class ChecklistViewController: UIViewController, MFMailComposeViewControllerDele
     }
     
     var resumoDoPedido:String?
+    var cliente = Cliente()
+    var pedido = Pedido()
     
     override func viewDidLoad() {
         colocaNoTextView(palavras: resumoDoPedido!)

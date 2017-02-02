@@ -28,9 +28,12 @@ extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    
+    //falta arrumar o pedido a ser apagado
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.produtos.remove(at: indexPath.row)
+            self.pedido.apagaProduto(indice: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .top)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.

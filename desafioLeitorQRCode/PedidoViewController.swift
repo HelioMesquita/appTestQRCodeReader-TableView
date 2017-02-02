@@ -16,7 +16,6 @@ class PedidoViewController: UIViewController {
     let produto4 = Produto(codigoProduto: "04", codigoID: "04", descricao: "Brownie", preco: 2, quantidade: 1000)
     let produto5 = Produto(codigoProduto: "05", codigoID: "05", descricao: "Chocolate", preco: 2, quantidade: 1000)
 
-    var produtos = [Produto]()
     var pedido = Pedido()
     var cliente = Cliente()
     
@@ -26,16 +25,11 @@ class PedidoViewController: UIViewController {
         super.viewDidLoad()
         tabela.delegate = self
         tabela.dataSource = self
-        
-        //produtos.append(produto1)
-        //produtos.append(produto2)
-        //produtos.append(produto3)
-        //produtos.append(produto4)
-        
-        pedido.adicionaProduto(produto: produto1)
-        pedido.adicionaProduto(produto: produto2)
-        pedido.adicionaProduto(produto: produto3)
-        pedido.adicionaProduto(produto: produto4)
+
+        //pedido.adicionaProduto(produto: produto1)
+        //pedido.adicionaProduto(produto: produto2)
+        //pedido.adicionaProduto(produto: produto3)
+        //pedido.adicionaProduto(produto: produto4)
         
     }
 
