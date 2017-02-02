@@ -11,14 +11,26 @@ import UIKit
 import MessageUI
 
 extension ChecklistViewController{
-    // caso o email nao esteja configurado
+
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+    
+        mailComposerVC.mailComposeDelegate = self
         
-        mailComposerVC.setToRecipients(["oorcamento@homeon.com.br;"])
+        mailComposerVC.setToRecipients(["mesquitahelio@hotmail.com"])
+        
         mailComposerVC.setSubject("Lista de Compras")
+        
         mailComposerVC.setMessageBody("<b>Sending e-mail in-app is not so bad!</b>", isHTML: true)
+        
+        // trabalhar o texto a ser enviado
+        let text = "some text\n\n\n\nTestando" //just a text
+        let data = text.data(using: String.Encoding.utf8)
+        
+        mailComposerVC.addAttachmentData(data!, mimeType: "text/plain", fileName: "Arquivo")
+        
+       
+        
         return mailComposerVC
     }
     

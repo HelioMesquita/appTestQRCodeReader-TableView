@@ -13,7 +13,7 @@ extension PedidoViewController: AdicionaProdutosTabela{
     
     func adicionaProdutosDelegate(id: String) {
         print("Produto \(id)")
-     
+        
         func recebeID (produtoTeste:Produto){
             if self.pedido.produtos.contains(where: { (Produto) -> Bool in
                 if Produto.codigoProduto == produtoTeste.codigoProduto{ return true } else { return false } }) == false{
@@ -33,7 +33,6 @@ extension PedidoViewController: AdicionaProdutosTabela{
             }
         }
         
-        
         switch id {
             
             // esta funcao funciona verificando se ha algum produto com codigo igual
@@ -44,6 +43,7 @@ extension PedidoViewController: AdicionaProdutosTabela{
             
             // ## deve ser possivel melhora este tipo de funcao ##
             
+            // ### funcao legado ###
             
             // if self.pedido.produtos.contains(where: { (Produto) -> Bool in
             //if Produto.codigoProduto == produto4.codigoProduto{ return true } else { return false } }) == false{
@@ -62,12 +62,10 @@ extension PedidoViewController: AdicionaProdutosTabela{
             //}
             //}
             
-            
-            
         case "01":
             recebeID(produtoTeste: produto1)
             break
-        
+            
         case "02":
             recebeID(produtoTeste: produto2)
             break

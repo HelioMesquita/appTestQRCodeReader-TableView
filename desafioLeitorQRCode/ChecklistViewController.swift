@@ -13,6 +13,8 @@ import MessageUI
 
 class ChecklistViewController: UIViewController, MFMailComposeViewControllerDelegate{
     
+    
+    
     @IBAction func sendEmail(_ sender: Any) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {

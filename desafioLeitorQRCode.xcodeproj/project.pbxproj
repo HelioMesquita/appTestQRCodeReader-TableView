@@ -26,6 +26,7 @@
 		FD2D95211E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */; };
 		FD2D95231E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95221E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift */; };
 		FD2D95261E417ABF0032B65D /* ExtensionChecklistViewController + Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D95251E417ABF0032B65D /* ExtensionChecklistViewController + Email.swift */; };
+		FD2D952A1E42D55E0032B65D /* imagemText.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2D95291E42D55E0032B65D /* imagemText.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FD2D95201E411F880032B65D /* ExtensionPedidoViewController+PrepareForSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionPedidoViewController+PrepareForSegue.swift"; sourceTree = "<group>"; };
 		FD2D95221E415A710032B65D /* ExtensionInformacoesCliente + UITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionInformacoesCliente + UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		FD2D95251E417ABF0032B65D /* ExtensionChecklistViewController + Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtensionChecklistViewController + Email.swift"; sourceTree = "<group>"; };
+		FD2D95291E42D55E0032B65D /* imagemText.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imagemText.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FD2D94EE1E40C1DF0032B65D /* AppDelegate.swift */,
 				FD2D94F21E40C1DF0032B65D /* Main.storyboard */,
 				FD2D94F81E40C1DF0032B65D /* Assets.xcassets */,
+				FD2D95291E42D55E0032B65D /* imagemText.jpg */,
 				FD2D94FA1E40C1DF0032B65D /* LaunchScreen.storyboard */,
 				FD2D94FD1E40C1DF0032B65D /* Info.plist */,
 				FD2D94F51E40C1DF0032B65D /* desafioLeitorQRCode.xcdatamodeld */,
@@ -222,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2D952A1E42D55E0032B65D /* imagemText.jpg in Resources */,
 				FD2D94FC1E40C1DF0032B65D /* LaunchScreen.storyboard in Resources */,
 				FD2D94F91E40C1DF0032B65D /* Assets.xcassets in Resources */,
 				FD2D94F41E40C1DF0032B65D /* Main.storyboard in Resources */,

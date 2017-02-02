@@ -21,12 +21,16 @@ class PedidoViewController: UIViewController {
     
     @IBOutlet weak var tabela: UITableView!
     
+    @IBAction func voltar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tabela.delegate = self
         tabela.dataSource = self
 
-        //pedido.adicionaProduto(produto: produto1)
+        pedido.adicionaProduto(produto: produto1)
         //pedido.adicionaProduto(produto: produto2)
         //pedido.adicionaProduto(produto: produto3)
         //pedido.adicionaProduto(produto: produto4)
