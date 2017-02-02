@@ -18,26 +18,29 @@ class CelulaProduto: UITableViewCell {
     @IBOutlet weak var stepper: UIStepper!
     
     
-    var stepperValor:Double = 1
     
     @IBAction func adicionaOuRemove(_ sender: UIStepper) {
         
         if (produto?.quantidade)! > (produto?.quantidadeTravada)!{
             
-            if sender.value > stepperValor {
-                stepperValor += 1
+            if sender.value > 0 {
+                
                 self.quantidadeDoProduto = (produto?.quantidadeTravada)! + 1
                 self.produto?.quantidadeTravada = quantidadeDoProduto
                 
                 self.quantidade.text = String((self.produto?.quantidadeTravada)!)
                 
+                stepper.value = 0
                 //print(stepperValor)
             } else{
-                stepperValor -= 1
+                
+                
                 self.quantidadeDoProduto = (produto?.quantidadeTravada)! - 1
                 self.produto?.quantidadeTravada = quantidadeDoProduto
                 
                 self.quantidade.text = String((self.produto?.quantidadeTravada)!)
+                
+                stepper.value = 0
                 //print(stepperValor)
             }
         }
@@ -45,7 +48,9 @@ class CelulaProduto: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        stepper.value = 1
+        stepper.value = 0
+        stepper.minimumValue = -1
+        stepper.maximumValue = 1
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
