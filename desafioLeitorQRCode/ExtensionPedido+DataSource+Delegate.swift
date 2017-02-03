@@ -21,9 +21,10 @@ extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CelulaProduto", for: indexPath) as! CelulaProduto
+        
         let pedidoRecebido = pedido.retornaProduto(indice: indexPath.row)
         // utiliza esta closure para fornecer informacoes na celulaproduto
-        cell.recebeProduto(produto: pedidoRecebido.produtoEnvia,quantidade: pedidoRecebido.quantidadeEnvia)
+        cell.recebeProduto(produto: pedidoRecebido.produtoEnvia,quantidadeEscolhida: pedidoRecebido.quantidadeEnvia)
         
         return cell
     }
@@ -33,6 +34,7 @@ extension PedidoViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            self.pedido.produtos[indexPath.row].quantidadeTravada = 0
             self.pedido.apagaProduto(indice: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .top)
         } else if editingStyle == .insert {

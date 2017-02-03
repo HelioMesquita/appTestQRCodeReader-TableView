@@ -10,7 +10,6 @@ import UIKit
 
 class CelulaProduto: UITableViewCell {
     
-    var quantidadeDoProduto:Int = 1
     var produto:Produto?
     
     @IBOutlet weak var descricao: UILabel!
@@ -18,52 +17,52 @@ class CelulaProduto: UITableViewCell {
     @IBOutlet weak var stepper: UIStepper!
     
     
-    
+    var stepperInicial:Double = 1
     @IBAction func adicionaOuRemove(_ sender: UIStepper) {
+        //print(sender.value)
         
-        if (produto?.quantidade)! > (produto?.quantidadeTravada)!{
+        if sender.value > stepperInicial{
+            //print("botao +")
             
-            if sender.value > 0 {
-                
-                self.quantidadeDoProduto = (produto?.quantidadeTravada)! + 1
-                self.produto?.quantidadeTravada = quantidadeDoProduto
-                
-                self.quantidade.text = String((self.produto?.quantidadeTravada)!)
-                
-                stepper.value = 0
-                //print(stepperValor)
-            } else{
-                
-                
-                self.quantidadeDoProduto = (produto?.quantidadeTravada)! - 1
-                self.produto?.quantidadeTravada = quantidadeDoProduto
-                
-                self.quantidade.text = String((self.produto?.quantidadeTravada)!)
-                
-                stepper.value = 0
-                //print(stepperValor)
-            }
+            let adiciona = (self.produto?.quantidadeTravada)! + 1
+            self.produto?.quantidadeTravada = adiciona
+            
+            self.quantidade.text = String((self.produto?.quantidadeTravada)!)
+            
+            stepperInicial += 1
+            
+        } else if sender.value <= -1{
+            sender.value = 0
+        } else{
+            //print("botao -")
+            
+            let subtrai = (self.produto?.quantidadeTravada)! - 1
+            self.produto?.quantidadeTravada = subtrai
+            
+            self.quantidade.text = String((self.produto?.quantidadeTravada)!)
+            stepperInicial -= 1
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        stepper.value = 0
-        stepper.minimumValue = -1
-        stepper.maximumValue = 1
+        stepper.minimumValue = -1000
+        stepperInicial = stepper.value
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func recebeProduto(produto:Produto,quantidade:Int){
+    func recebeProduto(produto:Produto,quantidadeEscolhida:Int){
         self.produto = produto
-        self.quantidadeDoProduto = quantidade
+        
+        stepper.value = Double(produto.quantidadeTravada!)
+        stepper.maximumValue = Double(produto.quantidade!)
         
         self.descricao.text = produto.descricao
         
-        self.quantidade.text = String((self.produto?.quantidadeTravada)!)
+        self.quantidade.text = String(produto.quantidadeTravada!)
         
         
     }

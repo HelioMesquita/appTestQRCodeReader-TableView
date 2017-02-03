@@ -25,8 +25,8 @@ extension PedidoViewController: AdicionaProdutosTabela{
                     let adiciona = produtoTeste.quantidadeTravada! + 1
                     produtoTeste.quantidadeTravada = adiciona
                     
-                    let remove = produtoTeste.quantidade! - 1
-                    produtoTeste.quantidade = remove
+                    //let remove = produtoTeste.quantidade! - 1
+                    //produtoTeste.quantidade = remove
                     
                     tabela.reloadData()
                 }

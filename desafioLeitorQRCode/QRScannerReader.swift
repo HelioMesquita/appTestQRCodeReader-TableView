@@ -22,8 +22,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     @IBOutlet var navBar: UINavigationBar!
     var delegate:AdicionaProdutosTabela?
     
-    @IBOutlet var viewZinha: UIView!
-    @IBOutlet weak var message: UILabel!
+
 
     @IBAction func voltar(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -78,8 +77,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             captureSession?.startRunning()
             
             // Move the message label and top bar to the front
-            view.bringSubview(toFront: message)
-            view.bringSubview(toFront: viewZinha)
             view.bringSubview(toFront: navBar)
             
             // Initialize QR Code Frame to highlight the QR code
@@ -112,7 +109,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            message.text = "Nenhum QR/barcode detectado"
             return
         }
         
@@ -125,10 +121,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                message.text = metadataObj.stringValue
-              
-                
-                
                 while contador < 1{
                     self.delegate?.adicionaProdutosDelegate(id: metadataObj.stringValue)
                     contador += 1

@@ -250,43 +250,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSG-Vi-jRM">
-                                <rect key="frame" x="0.0" y="608" width="375" height="59"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-Bx-jRR">
-                                        <rect key="frame" x="8" y="19" width="359" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="ENf-oS-CTI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99691629224464018" green="0.9939930281699384" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="1XY-zj-KwB"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jm5-Bx-jRR" secondAttribute="trailing" constant="8" id="CRi-rv-Jy8"/>
-                                    <constraint firstItem="Jm5-Bx-jRR" firstAttribute="leading" secondItem="zSG-Vi-jRM" secondAttribute="leading" constant="8" id="MpP-uF-kKP"/>
-                                    <constraint firstItem="Jm5-Bx-jRR" firstAttribute="top" secondItem="zSG-Vi-jRM" secondAttribute="top" constant="19" id="ZHd-yy-7j5"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jm5-Bx-jRR" secondAttribute="bottom" constant="19" id="usi-j5-6bk"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wgY-hy-QBg" secondAttribute="trailing" id="C36-CR-Ivm"/>
-                            <constraint firstItem="3OT-dM-MHv" firstAttribute="top" secondItem="zSG-Vi-jRM" secondAttribute="bottom" id="DXc-BY-dIA"/>
                             <constraint firstItem="wgY-hy-QBg" firstAttribute="top" secondItem="TDr-zB-t7J" secondAttribute="top" id="PzP-Rt-31K"/>
                             <constraint firstItem="wgY-hy-QBg" firstAttribute="leading" secondItem="TDr-zB-t7J" secondAttribute="leading" id="d9t-wh-ZXp"/>
-                            <constraint firstAttribute="trailing" secondItem="zSG-Vi-jRM" secondAttribute="trailing" id="mUg-LJ-B2p"/>
-                            <constraint firstItem="zSG-Vi-jRM" firstAttribute="leading" secondItem="TDr-zB-t7J" secondAttribute="leading" id="nU3-0d-Ou8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="message" destination="Jm5-Bx-jRR" id="8JQ-nx-22W"/>
                         <outlet property="navBar" destination="wgY-hy-QBg" id="5qg-d4-btF"/>
-                        <outlet property="viewZinha" destination="zSG-Vi-jRM" id="PiB-VH-mb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGm-Ey-YjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,7 +329,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g8q-SN-Oxe" id="ebf-3D-mLE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cM-QM-5jD">
@@ -368,7 +341,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XVJ-u4-7fy">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XVJ-u4-7fy">
                                                     <rect key="frame" x="273" y="14" width="94" height="29"/>
                                                     <connections>
                                                         <action selector="adicionaOuRemove:" destination="g8q-SN-Oxe" eventType="valueChanged" id="pyM-1o-O0L"/>
